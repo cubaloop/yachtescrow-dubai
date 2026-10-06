@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>YachtEscrow Dubai — Marine Charter Fuel &amp; Escrow Settlement Protocol</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="announcement-bar" style="background: var(--accent-gold); color: #FFFDF8; font-size: 0.85rem; padding: 0.5rem 1rem; text-align: center; font-weight: 500;">
+    <span id="announcement-text">Dubai Harbour 2026 Season: Verified marine fuel telemetry and 100% transparent charter escrow settlement active.</span>
+  </div>
+
+  <header style="padding: 1.25rem 2rem; border-bottom: 1px solid var(--border-subtle); background: var(--bg-surface); position: sticky; top: 0; z-index: 100;">
+    <div style="max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+      <div>
+        <div class="font-display" style="font-size: 1.7rem; font-weight: 800; color: var(--text-main);">
+          YACHTESCROW DUBAI
+        </div>
+        <a href="https://maps.google.com/?q=Dubai+Harbour+Yacht+Club" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--accent-gold); text-decoration: none; margin-top: 0.2rem; font-weight: 600;">
+          <span>★ 4.97</span>
+          <span style="color: var(--text-muted); font-weight: 400;">(1,890 verified nautical charters)</span>
+        </a>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <button id="lang-toggle-btn" class="btn-outline" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;" onclick="toggleLanguage()">
+          العربية
+        </button>
+        <button id="theme-toggle-btn" class="btn-outline" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;" onclick="toggleTheme()">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <button onclick="openAdminModal()" style="background: var(--accent-gold-soft); border: 1px solid var(--accent-gold); color: var(--accent-gold); padding: 0.45rem 1rem; border-radius: 9999px; font-size: 0.85rem; font-weight: 600; cursor: pointer;">
+          Admin
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="max-width: 1300px; margin: 0 auto; padding: 2.5rem 1.5rem;">
+
+    <section class="bento-grid" style="margin-bottom: 3.5rem;">
+      <div class="bento-card" style="grid-column: span 7; display: flex; flex-direction: column; justify-content: center; padding: 3rem 2.5rem;">
+        <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-gold-soft); border: 1px solid var(--border-gold); color: var(--accent-gold); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; width: fit-content; margin-bottom: 1.5rem;">
+          <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #25D366;"></span>
+          DMCA Marine Telemetry Escrow Active
+        </div>
+        <h1 class="font-display" style="font-size: 3.4rem; line-height: 1.15; margin-bottom: 1.25rem; color: var(--text-main);">
+          Superyacht Charters, Settled with Absolute Certainty
+        </h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem; max-width: 540px;">
+          Charter the finest superyachts from Dubai Harbour and Palm Jumeirah. Fuel deposits and nautical routes are reconciled cryptographically with automated refund of unused fuel deposits.
+        </p>
+        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+          <button class="btn-gold" onclick="openBookingModal()">Reserve Superyacht</button>
+          
+          <a href="https://wa.me/971508379080" target="_blank" rel="noopener" class="whatsapp-icon-btn" aria-label="WhatsApp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.579 1.831.848 2.791.848 3.18 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.768-5.768-5.768zm7.391 5.765c-.002 4.08-3.315 7.394-7.391 7.394-1.246 0-2.433-.323-3.486-.927l-4.145 1.087 1.107-4.043c-.682-1.096-1.047-2.364-1.048-3.511.002-4.08 3.316-7.394 7.392-7.394 4.076 0 7.39 3.315 7.392 7.394z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="bento-card" style="grid-column: span 5; padding: 0; overflow: hidden; position: relative; min-height: 440px;">
+        <img src="assets/yacht_hero.jpg" alt="Dubai Harbour Superyacht Cruise" style="width: 100%; height: 100%; object-fit: cover;">
+        <div style="position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; background: rgba(255, 253, 248, 0.85); backdrop-filter: blur(12px); border: 1px solid var(--border-gold); border-radius: 1.25rem; padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Marina Base</div>
+            <div style="font-weight: 600; font-size: 0.95rem; color: var(--text-main);">Dubai Harbour Marina, Dubai</div>
+          </div>
+          <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent-gold);">Berth Ready</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Yacht Fleet Section -->
+    <section style="margin-bottom: 4rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <div style="font-size: 0.85rem; text-transform: uppercase; color: var(--accent-gold); font-weight: 700;">Charter Fleet</div>
+          <h2 class="font-display" style="font-size: 2.6rem; color: var(--text-main);">Vessels Available</h2>
+        </div>
+        <div id="category-filters" style="display: flex; gap: 0.5rem; overflow-x: auto;"></div>
+      </div>
+
+      <div id="vessels-grid" class="bento-grid"></div>
+    </section>
+
+    <!-- Telemetry Escrow Demo -->
+    <section class="bento-card" style="margin-bottom: 4rem;">
+      <h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 0.75rem; color: var(--text-main);">
+        Marine Telemetry &amp; Escrow Verification
+      </h3>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 650px;">
+        Simulate real-time GPS nautical voyage waypoint tracking and automated fuel deposit settlement calculation.
+      </p>
+      <button class="btn-gold" onclick="runTelemetryDemo()">Simulate Fuel Escrow Settlement</button>
+      <div id="telemetry-demo-result" style="display: none; margin-top: 1.25rem; background: var(--bg-primary); padding: 1rem; border-radius: 0.75rem; font-family: monospace; font-size: 0.85rem; color: var(--text-main); word-break: break-all;"></div>
+    </section>
+
+  </main>
+
+  <footer style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle); padding: 3rem 2rem; margin-top: 3rem;">
+    <div style="max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+      <div>
+        <div class="font-display" style="font-size: 1.4rem; color: var(--text-main);">YACHTESCROW DUBAI</div>
+        <div style="font-size: 0.85rem; color: var(--text-muted);">Dubai Harbour Yacht Club, Dubai Marina, UAE</div>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        Developed by <strong style="color: var(--accent-gold);">Tecnoemprende</strong>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/971508379080" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.579 1.831.848 2.791.848 3.18 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.768-5.768-5.768zm7.391 5.765c-.002 4.08-3.315 7.394-7.391 7.394-1.246 0-2.433-.323-3.486-.927l-4.145 1.087 1.107-4.043c-.682-1.096-1.047-2.364-1.048-3.511.002-4.08 3.316-7.394 7.392-7.394 4.076 0 7.39 3.315 7.392 7.394z"/></svg>
+  </a>
+
+  <!-- Admin Modal (5 Tabs) -->
+  <div id="admin-modal" class="admin-modal-backdrop" onclick="handleBackdropClick(event)">
+    <div class="admin-drawer">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <div>
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--accent-gold); font-weight: 700;">Tierra Querida Engine</span>
+          <h3 class="font-display" style="font-size: 1.7rem; color: var(--text-main);">Marina Fleet Admin</h3>
+        </div>
+        <button onclick="closeAdminModal()" style="background: none; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer;">&times;</button>
+      </div>
+
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchAdminTab('tab-vessels')" data-tab="tab-vessels">1. Vessels</button>
+        <button class="tab-btn" onclick="switchAdminTab('tab-announcements')" data-tab="tab-announcements">2. Announcements</button>
+        <button class="tab-btn" onclick="switchAdminTab('tab-categories')" data-tab="tab-categories">3. Categories</button>
+        <button class="tab-btn" onclick="switchAdminTab('tab-charters')" data-tab="tab-charters">4. Active Charters</button>
+        <button class="tab-btn" onclick="switchAdminTab('tab-settings')" data-tab="tab-settings">5. Supabase &amp; Backup</button>
+      </div>
+
+      <div id="tab-vessels" class="tab-content" style="display: block;">
+        <h4 style="margin-bottom: 1rem; color: var(--text-main);">Manage Yacht Fleet</h4>
+        <div id="admin-vessels-list"></div>
+      </div>
+      <div id="tab-announcements" class="tab-content" style="display: none;">
+        <h4>Announcement Editor</h4>
+        <textarea id="edit-announcement" rows="3" style="width: 100%; padding: 0.65rem; border-radius: 0.5rem; border: 1px solid var(--border-gold); background: var(--bg-surface); color: var(--text-main); margin-bottom: 1rem;"></textarea>
+        <button class="btn-gold" onclick="saveAnnouncement()">Update Live Banner</button>
+      </div>
+      <div id="tab-categories" class="tab-content" style="display: none;">
+        <h4>Categories</h4>
+        <div id="admin-cat-list"></div>
+      </div>
+      <div id="tab-charters" class="tab-content" style="display: none;">
+        <h4>Charters &amp; Escrow Ledger</h4>
+        <div id="admin-charters-list"></div>
+      </div>
+      <div id="tab-settings" class="tab-content" style="display: none;">
+        <h4>Dual-Layer &amp; Backup</h4>
+        <button class="btn-gold" onclick="exportBackupJSON()">Export Backup JSON</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="booking-modal" class="admin-modal-backdrop" onclick="handleBookingBackdrop(event)">
+    <div style="background: var(--bg-surface); max-width: 460px; width: 90%; border-radius: 1.5rem; padding: 2rem; border: 1px solid var(--border-gold); margin: auto;">
+      <h3 class="font-display" style="font-size: 1.8rem; color: var(--text-main); margin-bottom: 0.5rem;">Reserve Superyacht Charter</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Immediate VIP reservation from Dubai Harbour with fuel escrow guarantee.</p>
+      <form onsubmit="handleCustomerCharter(event)">
+        <div style="margin-bottom: 0.85rem;">
+          <label style="font-size: 0.8rem; color: var(--text-muted);">Client Full Name</label>
+          <input type="text" id="cust-name" required style="width: 100%; padding: 0.65rem; border-radius: 0.5rem; border: 1px solid var(--border-gold); background: var(--bg-primary); color: var(--text-main);">
+        </div>
+        <div style="margin-bottom: 0.85rem;">
+          <label style="font-size: 0.8rem; color: var(--text-muted);">WhatsApp Number</label>
+          <input type="tel" id="cust-phone" required value="+971 " style="width: 100%; padding: 0.65rem; border-radius: 0.5rem; border: 1px solid var(--border-gold); background: var(--bg-primary); color: var(--text-main);">
+        </div>
+        <div style="margin-bottom: 1.25rem;">
+          <label style="font-size: 0.8rem; color: var(--text-muted);">Selected Vessel</label>
+          <select id="cust-vessel" style="width: 100%; padding: 0.65rem; border-radius: 0.5rem; border: 1px solid var(--border-gold); background: var(--bg-primary); color: var(--text-main);"></select>
+        </div>
+        <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+          <button type="button" class="btn-outline" onclick="closeBookingModal()">Cancel</button>
+          <button type="submit" class="btn-gold">Confirm Charter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
